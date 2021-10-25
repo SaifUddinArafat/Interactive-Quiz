@@ -1,3 +1,162 @@
 body{
-    margin-left: 35%;
+    background-color: rgba(4, 68, 62, 0.815);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*######################### Start Button Style ############################*/
+.start{
+    display: grid;
+    place-items: center;
+}
+
+.startBtn{
+    background-color: rgba(4, 255, 234, 0.753);
+    color: rgb(8, 7, 7);
+    padding: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.startBtn:hover{
+    border: 2px solid rgba(9, 9, 250, 0.589);
+    background-color: rgba(255, 255, 255, 0.945);
+    transition: all .3s ease;
+    color: rgba(16, 16, 253, 0.692);
+}
+
+
+/*######################### Quiz Box Style ############################*/
+.questionContainer{
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px 1px rgba(22, 20, 20, 0.733);
+
+}
+
+/*##### Quiz Box Header Style #######*/
+.questionContainer header{
+    min-height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(163, 162, 162);
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 3px 5px 1px rgba(7, 6, 6, 0.829);
+}
+
+.questionContainer header .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    background-color: rgba(4, 255, 234, 0.849);
+    padding: 5px;
+    border-radius: 5px;
+}
+.questionContainer header .timeLeft{
+    font-size: 17px;
+    font-weight: 400;
+}
+.questionContainer header .timeSec{
+    background-color: rgba(7, 6, 6, 0.829);
+    padding: 2px;
+    color: white;
+    margin-left: 2px;
+    font-size: 18px;
+}
+
+/*##### Quiz Box Question Box Style #######*/
+.questionContainer .questionBox{
+    text-align: center;
+    border-bottom: 2px solid rgb(163, 162, 162);
+}
+
+.questionContainer .questionBox h3{
+    background-color: rgba(227, 215, 238, 0.849);
+    padding: 25px 0px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 1px 4px 3px 1px black;
+}
+
+.questionContainer .questionBox ul{
+    font-size: 17px;
+}
+
+.questionContainer .questionBox li{
+    line-height: 30px;
+    margin: 10px 20px 10px 0px;
+    padding: 5px 0px;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 3px 5px 1px rgba(7, 6, 6, 0.829);
+}
+
+.questionContainer .questionBox li:hover{
+    background-color: rgba(89, 197, 224, 0.842);
+}
+
+/*##### Quiz Pagination Style #######*/
+.questionContainer .pagination{
+    min-height: 45px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questionContainer .pagination button{
+    margin-top: 20px;
+    margin: 10px;
+    padding: 5px 15px;
+    background-color: rgba(255, 251, 251, 0.884);
+    color: rgba(9, 9, 231, 0.808);
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid rgba(90, 90, 223, 0.822);
+    box-shadow: 1px 2px 1px 1px rgba(58, 55, 55, 0.89);
+}
+
+.questionContainer .pagination button:hover{
+    color: rgba(255, 251, 251, 0.884);
+    background-color: rgba(0, 0, 255, 0.685);
+}
+
+
+/*######################### Responsive Css ############################*/
+@media  (max-width: 960px) {
+    body{
+        height: 150vh;
+    }
+    .questionContainer{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .questionContainer .questionBox li{
+        line-height: 20px;
+    }
 }

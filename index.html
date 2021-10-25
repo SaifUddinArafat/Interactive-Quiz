@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>Interactive Quiz</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>To Do List</h1>
+    <div class="container">
+
+        <!-- Start Button -->
+        <div class="start" id="start">
+            <button class="startBtn" id="startBtn">Start Quiz</button>
+        </div>
+
+        <!-- Rules Section -->
+        <!-- <div class="rule">
+            <ul type="1">
+                <li>Turn on your camera while giving the exam</li>
+                <li>Turn on your camera while giving the exam</li>
+                <li>Turn on your camera while giving the exam</li>
+                <li>Turn on your camera while giving the exam</li>
+                <button>Exit</button> <button>Continue</button>
+            </ul>
+        </div> -->
+
+        <!-- Quiz Box Section -->
+        <div id="questions" class="questionContainer">
+            <header class="header">
+                <div class="title">Saif's Quiz Test 2021</div>
+                
+                <div class="timer">
+                    <div class="timeLeft">Time Left</div>
+                    <div class="timeSec">15</div>
+                </div>
+            </header>
+
+            <section class="questionBox">
+                <h3 id="Question">This is your question for the quiz?</h2>
+                <ul type="none" id="options">
+                    <li><input type="radio" name="question" class="option" id="option1"> The quick brown fox jumps over the lazy dog.<br></li>
+                    <li><input type="radio" name="question" class="option" id="option2"> The quick brown fox jumps over the lazy dog.<br></li>
+                    <li><input type="radio" name="question" class="option" id="option3"> The quick brown fox jumps over the lazy dog.<br></li>
+                    <li><input type="radio" name="question" class="option" id="option3"> The quick brown fox jumps over the lazy dog.<br></li>
+                </ul>
+            </section>
+
+            <section class="pagination">
+                <button id="backBtn" class="nextBtn"> Back </button>
+                <button id="nextBtn" class="nextBtn"> Next </button>
+            </section>
+
+            <footer class="footer">
+                
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
