@@ -147,7 +147,7 @@ nextBtn.addEventListener('click', ()=>{
     scoreFromHtml.style.display="grid";
     
     scoreFromHtml.innerHTML = `<h3>Your Score is ${score} <br> 
-    <a href="index.html"> <button id="tryAgain">Try Again</button> <a>`;
+    <a href="index.html"> <button id="tryAgain" class="Btn">Try Again</button> <a>`;
   }
 });
 

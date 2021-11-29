@@ -20,6 +20,20 @@ ul{
     margin: 0;
 }
 
+.Btn{
+    background-color: rgba(255, 251, 251, 0.884);
+    color: rgba(9, 9, 231, 0.808);
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid rgba(90, 90, 223, 0.822);
+    box-shadow: 1px 2px 1px 1px rgba(58, 55, 55, 0.89);
+}
+
+.Btn:hover{
+    color: rgba(255, 251, 251, 0.884);
+    background-color: rgba(0, 0, 255, 0.685);
+}
+
 /*######################### Start Button Style ############################*/
 .start{
     display: grid;
@@ -34,7 +48,6 @@ ul{
     font-weight: bold;
     border: 0;
     border-radius: 10px;
-    cursor: pointer;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,23 +76,13 @@ ul{
     box-shadow: 0px 3px 6px 1px rgba(22, 20, 20, 0.733);
 }
 
-#rules .btn{
+#rules button{
     margin-top: 15px;
     margin-right: 20px;
     width: 100px;
     height: 30px;
-    background-color: rgba(255, 251, 251, 0.884);
-    color: rgba(9, 9, 231, 0.808);
-    font-size: 15px;
-    font-weight: 600;
-    border: 1px solid rgba(90, 90, 223, 0.822);
-    box-shadow: 1px 2px 1px 1px rgba(58, 55, 55, 0.89);
 }
 
-#rulse .btn:hover{
-    color: rgba(255, 251, 251, 0.884);
-    background-color: rgba(0, 0, 255, 0.685);
-}
 /*######################### Quiz Box Style ############################*/
 .questionContainer{
     display: none;
@@ -180,18 +183,8 @@ ul{
     margin-top: 20px;
     margin: 10px;
     padding: 5px 15px;
-    background-color: rgba(255, 251, 251, 0.884);
-    color: rgba(9, 9, 231, 0.808);
-    font-size: 15px;
-    font-weight: 600;
-    border: 1px solid rgba(90, 90, 223, 0.822);
-    box-shadow: 1px 2px 1px 1px rgba(58, 55, 55, 0.89);
 }
 
-.questionContainer .pagination button:hover{
-    color: rgba(255, 251, 251, 0.884);
-    background-color: rgba(0, 0, 255, 0.685);
-}
 
 #score{
     display: none;
@@ -211,21 +204,11 @@ ul{
 }
 
 #score #tryAgain{
-    margin-top: 20px;
-    margin: 10px;
+    color: rgb(255, 255, 255);
     padding: 5px 15px;
     background-color: rgba(12, 44, 12, 0.884);
-    color: rgba(241, 241, 241, 0.925);
-    font-size: 15px;
-    font-weight: 600;
-    border: 1px solid rgba(66, 66, 97, 0.822);
-    box-shadow: 1px 1px 1px 1px rgba(255, 254, 254, 0.89);
 }
 
-#score #tryAgain:hover{
-    color: rgba(4, 5, 4, 0.884);
-    background-color: rgb(51, 122, 192);
-}
 
 /*######################### Responsive Css ############################*/
 @media  (max-width: 980px) {
@@ -238,16 +221,7 @@ ul{
         padding-bottom: 10px;
         margin-top: 20px;
         margin-bottom: 20px;
-    }  
-    .questionContainer header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 2px solid rgb(163, 162, 162);
-        border-radius: 5px 5px 0px 0px;
-        box-shadow: 0px 3px 5px 1px rgba(7, 6, 6, 0.829);
     }
-
     .questionContainer .questionBox li{
         font-size: 18px;
         line-height: 20px;
