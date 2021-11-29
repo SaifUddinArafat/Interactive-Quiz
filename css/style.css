@@ -9,10 +9,16 @@ body{
 button{
     cursor: pointer;
 }
+input{
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
 
 /*######################### Start Button Style ############################*/
 .start{
     display: grid;
+    /* display: none; */
     place-items: center;
 }
 
@@ -37,13 +43,26 @@ button{
     color: rgba(16, 16, 253, 0.692);
 }
 
-
-/*######################### Quiz Box Style ############################*/
-.questionContainer{
+#rules{
+    display: none;
     width: 50%;
     background-color: white;
     padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px 1px rgba(22, 20, 20, 0.733);
+}
+
+/*######################### Quiz Box Style ############################*/
+.questionContainer{
     display: none;
+    /* display: grid; */
+    width: 50%;
+    background-color: white;
+    padding: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -88,36 +107,43 @@ button{
 
 /*##### Quiz Box Question Box Style #######*/
 .questionContainer .questionBox{
-    text-align: center;
     border-bottom: 2px solid rgb(163, 162, 162);
 }
 
-.questionContainer .questionBox h3{
-    background-color: rgba(227, 215, 238, 0.849);
-    padding: 25px 0px;
+.questionContainer .questionBox #question{
+    color: rgb(243, 240, 240);
+    text-align: center;
+    background-color: rgba(2, 3, 37, 0.849);
+    padding: 20px 0px;
     width: 100%;
     font-size: 20px;
     font-weight: 600;
-    border-radius: 5px;
-    box-shadow: 1px 4px 3px 1px black;
-}
-
-.questionContainer .questionBox ul{
-    font-size: 17px;
+    border-radius: 8px;
+    box-shadow: 1px 4px 3px 1px rgb(241, 240, 240);
 }
 
 .questionContainer .questionBox li{
+    font-size: 18px;
     line-height: 30px;
     margin: 10px 20px 10px 0px;
-    padding: 5px 0px;
+    padding: 5px 50px;
     border-radius: 5px 5px 0px 0px;
     box-shadow: 0px 3px 5px 1px rgba(7, 6, 6, 0.829);
+    background-color: rgba(253, 206, 152, 0.932);
+}
+
+.questionContainer .questionBox li:nth-last-child(odd){
+    background-color: rgba(238, 222, 220, 0.651);
 }
 
 .questionContainer .questionBox li:hover{
-    background-color: rgba(89, 197, 224, 0.842);
+    background-color: rgba(32, 205, 228, 0.719);
 }
-
+.questionContainer .questionBox li input{
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 3px 5px 1px rgba(7, 6, 6, 0.829);
+    background-color: rgba(253, 206, 152, 0.932);  
+}
 /*##### Quiz Pagination Style #######*/
 .questionContainer .pagination{
     min-height: 45px;
@@ -144,6 +170,39 @@ button{
     background-color: rgba(0, 0, 255, 0.685);
 }
 
+#score{
+    display: none;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    background-color: rgba(34, 32, 32, 0.664);
+    color: rgb(40, 108, 253);
+    font-size: 35px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px 1px rgb(255, 255, 255);
+}
+
+#score #tryAgain{
+    margin-top: 20px;
+    margin: 10px;
+    padding: 5px 15px;
+    background-color: rgba(12, 44, 12, 0.884);
+    color: rgba(241, 241, 241, 0.925);
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid rgba(66, 66, 97, 0.822);
+    box-shadow: 1px 1px 1px 1px rgba(255, 254, 254, 0.89);
+}
+
+#score #tryAgain:hover{
+    color: rgba(4, 5, 4, 0.884);
+    background-color: rgb(51, 122, 192);
+}
 
 /*######################### Responsive Css ############################*/
 @media  (max-width: 960px) {
@@ -151,12 +210,32 @@ button{
         height: 150vh;
     }
     .questionContainer{
+        width: 80%;
         padding-top: 10px;
         padding-bottom: 10px;
         margin-top: 20px;
         margin-bottom: 20px;
+    }  
+    .questionContainer header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid rgb(163, 162, 162);
+        border-radius: 5px 5px 0px 0px;
+        box-shadow: 0px 3px 5px 1px rgba(7, 6, 6, 0.829);
     }
+
     .questionContainer .questionBox li{
+        font-size: 18px;
         line-height: 20px;
+        padding: 15px;
+    }
+    .questionContainer .questionBox li input{
+        margin-left: 10px;
+    }
+
+    #score{
+        font-size: 25px;
+        width: 50%;
     }
 }
