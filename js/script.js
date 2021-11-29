@@ -80,7 +80,7 @@ function quesPaper(){
   questionsBox.style.display = "grid";
 }
 
-/*##################### Continue Functionality ########################*/
+/*##################### Exit Functionality ########################*/
 /*#### Selecting items ####*/
 var exitBtn = document.querySelector("#exitBtn");
 
@@ -89,9 +89,14 @@ exitBtn.addEventListener('click', exitExam);
 
 /*##### Functions #####*/
 function exitExam(){
-  start.style.display = "grid";
+  start.style.display = "none";
   rules.style.display = "none";
   questionsBox.style.display = "none";
+  scoreFromHtml = document.getElementById("score");
+  scoreFromHtml.style.display="grid";
+  
+  scoreFromHtml.innerHTML = `<h4>You Have Exited from Exam </h4><br> 
+  <a href="index.html"> <button id="tryAgain" class="Btn">Start Again</button> <a>`;
 }
 
 /*##################### Loading Question From Database Array ########################*/
