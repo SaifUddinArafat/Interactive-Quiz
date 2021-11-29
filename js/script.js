@@ -125,12 +125,16 @@ var nextBtn = document.getElementById("nextBtn");
 /*#### Event listener #####*/
 /* ()=> arrowFunction */
 nextBtn.addEventListener('click', ()=>{
-  var answer = document.querySelector('input:checked').id;
-  var answerDb = quesDb[questionCount].ans;
-  if (answer === answerDb){
-    score++;
+  try{
+    var answer = document.querySelector('input:checked').id;
+    var answerDb = quesDb[questionCount].ans;
+    if (answer === answerDb){
+      score++;
+    }
   }
-  
+  catch(err){
+    alert("You Didn't Selected any option");
+  }
   questionCount++;
   
   if(questionCount < quesDb.length){
